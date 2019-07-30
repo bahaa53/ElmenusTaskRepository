@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".presentation.TagsItemsBaseScreen.ui.activity.MainActivity">
+
+    <TextView
+            android:id="@+id/tv_tags"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/elmenus_tags"
+            android:textSize="16sp"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginTop="@dimen/elmenus_tag_top_margin"
+            android:layout_marginStart="@dimen/elmenus_tag_start_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview_tags"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_tags"
+            android:layout_marginStart="@dimen/elmenus_tag_start_margin"
+            android:layout_marginEnd="@dimen/elmenus_tag_start_margin"
+            android:layout_marginTop="@dimen/elmenus_tag_top_margin"
+            tools:listitem="@layout/item_elmenus_tags_layout"/>
+
+    <TextView
+            android:id="@+id/tv_items"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/elmenus_items"
+            android:textSize="16sp"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginTop="@dimen/elmenus_tag_top_margin"
+            android:layout_marginStart="@dimen/elmenus_tag_start_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerview_tags"/>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview_items"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_items"
+            android:layout_marginStart="@dimen/elmenus_tag_start_margin"
+            android:layout_marginEnd="@dimen/elmenus_tag_start_margin"
+            android:layout_marginTop="@dimen/elmenus_tag_top_margin"
+            tools:listitem="@layout/item_elmenus_tags_layout"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Elmenus Task</string>
+    <string name="elmenus_tags">Elmenus Tags</string>
+    <string name="elmenus_items">Elmenus Items</string>
+</resources>
