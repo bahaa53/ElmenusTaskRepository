@@ -27,7 +27,6 @@
                     android:transitionName="elmenusItem"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/image"
                     android:fitsSystemWindows="true"
                     android:scaleType="centerCrop"
                     app:layout_collapseMode="parallax"/>
@@ -38,10 +37,10 @@
                     android:layout_height="wrap_content"
                     android:textSize="16sp"
                     android:textColor="@android:color/white"
-                    android:layout_marginLeft="32dp"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginBottom="32dp"
-                    android:layout_marginEnd="32dp"
+                    android:layout_marginLeft="@dimen/detail_act_item_name_margin"
+                    android:layout_marginStart="@dimen/detail_act_item_name_margin"
+                    android:layout_marginBottom="@dimen/detail_act_item_name_margin"
+                    android:layout_marginEnd="@dimen/detail_act_item_name_margin"
                     app:layout_collapseMode="parallax"
                     android:layout_gravity="bottom"
                     tools:text="Like LuaPass?\nBuy me a coffee :)"/>

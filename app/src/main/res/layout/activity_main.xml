@@ -41,9 +41,8 @@
             android:layout_marginTop="@dimen/elmenus_tag_top_margin"
             android:layout_marginStart="@dimen/elmenus_tag_start_margin"
             app:layout_constraintStart_toStartOf="parent"
-            android:orientation="horizontal"
-            app:layout_constraintTop_toBottomOf="@+id/recyclerview_tags"/>
-
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
 
     <androidx.recyclerview.widget.RecyclerView
@@ -56,6 +55,21 @@
             android:layout_marginStart="@dimen/elmenus_tag_start_margin"
             android:layout_marginEnd="@dimen/elmenus_tag_start_margin"
             android:layout_marginTop="@dimen/elmenus_tag_top_margin"
+            android:visibility="gone"
             tools:listitem="@layout/item_elmenus_tags_layout"/>
+
+    <TextView
+            android:id="@+id/tv_items_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_items_selected_yet"
+            android:textSize="12sp"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginTop="@dimen/elmenus_tag_top_margin"
+            android:layout_marginStart="@dimen/elmenus_tag_start_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/tv_items"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

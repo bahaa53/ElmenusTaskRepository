@@ -4,6 +4,7 @@ package com.rocca.umrah.elmenustask.presentation.TagsItemsBaseScreen.ui.activity
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityOptionsCompat
 import androidx.lifecycle.LiveData
@@ -109,11 +110,17 @@ class MainActivity : AppCompatActivity(), KodeinAware, CoroutineScope {
         val elmenusItemsLiveData = viewModel.requestElmenusItemsOfSpecificTag(tag?.tagName)
         elmenusItemsLiveData.observe(this@MainActivity, Observer {
             if (it == null) {
+                determineRecyclerViewVisibility(View.VISIBLE, View.GONE)
                 return@Observer
             }
-            mElmenusItemOfSpecificTag.clear()
-            mElmenusItemOfSpecificTag.addAll(it)
-            recyclerview_items.adapter?.notifyDataSetChanged()
+            if (!it.isEmpty()) {
+                determineRecyclerViewVisibility(View.GONE, View.VISIBLE)
+                mElmenusItemOfSpecificTag.clear()
+                mElmenusItemOfSpecificTag.addAll(it)
+                recyclerview_items.adapter?.notifyDataSetChanged()
+            } else {
+                determineRecyclerViewVisibility(View.VISIBLE, View.GONE)
+            }
         })
     }
 
@@ -126,6 +133,11 @@ class MainActivity : AppCompatActivity(), KodeinAware, CoroutineScope {
         } else {
             startActivity(elmenusItemDetailItent)
         }
+    }
+
+    private fun determineRecyclerViewVisibility(textViewVIsibility: Int, recyclerViewVisibility: Int) {
+        tv_items_error.visibility = textViewVIsibility
+        recyclerview_items.visibility = recyclerViewVisibility
     }
 
     override fun onDestroy() {

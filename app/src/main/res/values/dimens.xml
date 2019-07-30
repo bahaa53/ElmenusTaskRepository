@@ -7,4 +7,5 @@
     <dimen name="tag_imagview_height">150dp</dimen>
     <dimen name="item_tag_name_text_size">18sp</dimen>
     <dimen name="elmenus_tag_margin_end">8dp</dimen>
+    <dimen name="detail_act_item_name_margin">32dp</dimen>
 </resources>

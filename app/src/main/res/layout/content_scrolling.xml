@@ -15,20 +15,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/elmenus_tag_start_margin"
-            tools:text="We need to make a few changes to CollapsingToolbarLayout.
-
-Change CollapsingToolbarLayout app:expandedTitleGravity=top. This is to make sure the toolbar title stay on top when collapsing toolbar is expanded.
-We add ImageView and TextView within CollapsingToolbarLayout.
-For ImageView, set android:scaleType=centerCropto prevent squished image and set app:layout_collapseMode=parallax
-For TextView (serve at secondary text at bottom), set app:layout_collapseMode=parallax and android:layout_gravity=bottom
-NOTE: remember to use ImageView android:src to set image, not android:background (else the background shall be stretch to fit)
-We need to make a few changes to CollapsingToolbarLayout.
-
-Change CollapsingToolbarLayout app:expandedTitleGravity=top. This is to make sure the toolbar title stay on top when collapsing toolbar is expanded.
-We add ImageView and TextView within CollapsingToolbarLayout.
-For ImageView, set android:scaleType=centerCropto prevent squished image and set app:layout_collapseMode=parallax
-For TextView (serve at secondary text at bottom), set app:layout_collapseMode=parallax and android:layout_gravity=bottom
-NOTE: remember to use ImageView android:src to set image, not android:background (else the background shall be stretch to fit)
-NOTE: remember to use ImageView android:src to set image, not android:background (else the background shall be stretch to fit)"/>
+            tools:text="Elmenus"/>
 
 </androidx.core.widget.NestedScrollView>
